@@ -44,6 +44,7 @@
       {
         "id": 1,
         "resourceId": "r1",
+        "note": "",
         "startDate": "2024-03-20T10:00",
         "endDate": "2024-03-20T12:00",
         "name": "Click me",
@@ -53,6 +54,7 @@
       {
         "id": 2,
         "resourceId": "r2",
+        "note": "",
         "startDate": "2024-03-20T12:00",
         "endDate": "2024-03-20T13:30",
         "name": "Drag me",
@@ -61,6 +63,7 @@
       {
         "id": 3,
         "resourceId": "r3",
+        "note": "",
         "startDate": "2024-03-20T14:00",
         "duration": 2,
         "durationUnit": "h",
@@ -71,6 +74,7 @@
       {
         "id": 4,
         "resourceId": "r4",
+        "note": "",
         "startDate": "2024-03-20T08:00",
         "endDate": "2024-03-20T11:00",
         "name": "Right click me",
@@ -79,6 +83,7 @@
       {
         "id": 5,
         "resourceId": "r5",
+        "note": "",
         "startDate": "2024-03-20T15:00",
         "endDate": "2024-03-20T17:00",
         "name": "Resize me",
@@ -87,6 +92,7 @@
       {
         "id": 6,
         "resourceId": "r6",
+        "note": "",
         "startDate": "2024-03-20T16:00",
         "endDate": "2024-03-20T19:00",
         "name": "Important meeting (read-only)",
@@ -97,6 +103,7 @@
       {
         "id": 7,
         "resourceId": "r6",
+        "note": "",
         "startDate": "2024-03-20T06:00",
         "endDate": "2024-03-20T08:00",
         "name": "Sports event",
@@ -105,6 +112,7 @@
       {
         "id": 8,
         "resourceId": "r7",
+        "note": "",
         "startDate": "2024-03-20T09:00",
         "endDate": "2024-03-20T11:30",
         "name": "Dad's birthday!",
@@ -115,6 +123,7 @@
       {
         "id": 9,
         "resourceId": "r8",
+        "note": "",
         "startDate": "2024-03-20T14:00",
         "endDate": "2024-03-20T16:00",
         "name": "Visit dentist",
@@ -124,6 +133,7 @@
       {
         "id": 10,
         "resourceId": "r9",
+        "note": "",
         "startDate": "2024-03-20T10:00",
         "endDate": "2024-03-20T14:00",
         "name": "Car maintenance",
@@ -133,6 +143,7 @@
       {
         "id": 11,
         "resourceId": "r10",
+        "note": "",
         "startDate": "2024-03-20T16:00",
         "endDate": "2024-03-20T19:00",
         "name": "Party time",

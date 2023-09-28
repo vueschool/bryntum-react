@@ -13,14 +13,24 @@ function App() {
     { text: "Age", field: "age", width: 75 },
   ]);
 
-  const [accessGranted] = useState(true);
+  const [eventEditConfig] = useState({
+    items: {
+      // Custom field to edit notes about the event
+      noteField: {
+        // Type of field to use
+        type: "textarea",
+        // Label to show for the field
+        label: "Notes",
+        // Name of the field in the event record to read/write data to
+        // NOTE: Make sure your EventModel has this field for this to link up correctly
+        name: "note",
+      },
+    },
+  });
 
-  function handleEventMenuBeforeShow({ items }) {
-    if (!accessGranted) {
-      items.editEvent = false;
-      items.deleteEvent = false;
-      items.unassignEvent = false;
-    }
+  function handleBeforeEventEditShow({ editor, eventRecord }) {
+    const noteField = editor.widgetMap.noteField;
+    noteField.hidden = eventRecord.name === "Right click me";
   }
 
   return (
@@ -32,31 +42,8 @@ function App() {
         endDate={new Date(2024, 2, 20, 20)}
         crudManager={crudManagerConfig}
         columns={columnsConfig}
-        timeAxisHeaderMenuFeature={{
-          items: {
-            dateRange: {
-              text: "Start/End",
-              weight: 190,
-              style: {
-                background: "blue",
-              },
-            },
-          },
-        }}
-        onEventMenuBeforeShow={handleEventMenuBeforeShow}
-        eventMenuFeature={{
-          items: {
-            moveForward: {
-              icon: "b-fa b-fa-caret-right",
-              text: "Move 1 hour ahead",
-              cls: "b-separator", // Add a visual line above the item
-              weight: 400, // Add the item to the bottom
-              onItem: ({ eventRecord }) => {
-                eventRecord.shift(1, "hour");
-              },
-            },
-          },
-        }}
+        eventEditFeature={eventEditConfig}
+        onBeforeEventEditShow={handleBeforeEventEditShow}
       />
     </>
   );
